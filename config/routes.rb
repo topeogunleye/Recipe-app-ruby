@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/general_shopping_list', to: 'shopping_list#index'
   resources :recipes
   resources :inventories
   resources :foods, only: [:index, :create, :destroy]
