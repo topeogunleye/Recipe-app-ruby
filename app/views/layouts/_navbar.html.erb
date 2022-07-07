@@ -3,8 +3,11 @@
   <div><%= link_to "Recipe App", root_path %></div>
   <nav class="navbar">
     <ul>
-        <li>
+      <li>
         <%= link_to "inventory", inventories_path %>
+      </li>
+      <li>
+        <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>
       </li>
       <% else %>
       <% end %>
