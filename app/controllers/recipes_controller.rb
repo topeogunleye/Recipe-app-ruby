@@ -14,7 +14,14 @@ class RecipesController < ApplicationController
 
   def show; end
 
-  def destroy; end
+  def delete
+    @recipe = Recipe.find(params[:id])
+    if @recipe.destroy
+      redirect_to recipes_path, notice: 'Recipe deleted Successfully'
+    else
+      redirect_to root, alert: 'Could not delete recipe'
+    end
+  end
 
   def recipe_params; end
 end

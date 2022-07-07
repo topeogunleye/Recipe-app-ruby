@@ -1,0 +1,16 @@
+ul {
+  list-style: none;
+}
+ a {
+  text-decoration: none;
+ }
+
+ .recipe-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  border: solid 1px grey;
+  border-radius: 5px;
+  margin: 2% 5%;
+  padding: 1% 1%;
+}
