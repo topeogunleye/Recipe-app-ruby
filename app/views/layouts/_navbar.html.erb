@@ -1,0 +1,13 @@
+<header class="header">
+ <% if user_signed_in? %>
+  <div><%= link_to "Recipe App", root_path %></div>
+  <nav class="navbar">
+    <ul>
+        <li>
+        <%= link_to "inventory", inventories_path %>
+      </li>
+      <% else %>
+      <% end %>
+    </ul>
+  </nav>
+</header>
