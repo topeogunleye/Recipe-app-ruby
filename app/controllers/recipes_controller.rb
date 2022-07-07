@@ -1,5 +1,12 @@
 class RecipesController < ApplicationController
-  def index; end
+  def index
+    @recipes = Recipe.all
+  end
+
+  def public_recipes
+    @public_recipes = Recipe.includes(:user).all.where(publik: true).order(created_at: :desc)
+    render :public_recipes
+  end
 
   def new; end
 
