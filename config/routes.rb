@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "users#index"
   
   resources :recipes
-  resources :inventories
+  resources :inventories, only: [:index, :show, :new, :create, :destroy]
   resources :foods, only: [:index, :create, :destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
