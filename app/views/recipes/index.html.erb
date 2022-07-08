@@ -1,14 +1,19 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Recipes</h1>
-
-<div id="recipes">
-  <% @recipes.each do |recipe| %>
-    <%= render recipe %>
-    <p>
-      <%= link_to "Show this recipe", recipe %>
-    </p>
-  <% end %>
+<div class="recipe-list">
+  <div>
+    <%= link_to "New Recipe", new_recipe_path, class:"btn margin" %>
+  </div>
+  <ul>
+    <% if @recipes&.empty? %>
+      <p>No recipes to show!</p>
+      <%else%>
+      <% @recipes&.each do |recipe| %>
+      <li class="recipe-card">
+        <h2><%= link_to recipe.name, recipe_path(recipe.id), class:"recipe-title" %></h2>
+        <p><%= recipe.description %></p>
+        <%= link_to('Remove', delete_recipe_path(recipe), class:"btn") %>
+      <li>
+      <% end %>
+    <%end%>
+  </ul>
 </div>
-
-<%= link_to "New recipe", new_recipe_path %>
