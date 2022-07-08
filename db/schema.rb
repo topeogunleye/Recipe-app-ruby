@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_06_231154) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_07_121219) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,10 +25,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_06_231154) do
   create_table "inventories", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.bigint "users_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["users_id"], name: "index_inventories_on_users_id"
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_inventories_on_user_id"
   end
 
   create_table "inventory_foods", force: :cascade do |t|
@@ -76,7 +76,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_06_231154) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "inventories", "users", column: "users_id"
+  add_foreign_key "inventories", "users"
   add_foreign_key "inventory_foods", "foods", column: "foods_id"
   add_foreign_key "inventory_foods", "inventories", column: "inventories_id"
   add_foreign_key "recipe_foods", "foods", column: "foods_id"
