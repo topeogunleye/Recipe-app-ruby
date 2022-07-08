@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     end
     resources :recipe_food, only: [:new, :create, :destroy]
   end
-  resources :inventories
+  resources :inventories, only: [:index, :show, :new, :create, :destroy]
   resources :foods, only: [:index, :new, :create, :destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
