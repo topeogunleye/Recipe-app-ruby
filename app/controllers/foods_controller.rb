@@ -46,5 +46,4 @@ class FoodsController < ApplicationController
       render :edit
     end
   end
-
 end
