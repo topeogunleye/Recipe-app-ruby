@@ -16,40 +16,32 @@ RSpec.describe 'Recipe page', type: :feature do
   end
 
   it 'should be able to see Recipes' do
-    expect(page).to have_content('Recipes')
-  end
-
-
-  it 'should be able to see a new recipe button' do
     expect(page).to have_content('New Recipe')
   end
 
-  it 'should be able to see a new recipe form' do
+  it 'should be able to redirect to add recipe route' do
     click_link 'New Recipe'
-    expect(page).to have_content('Name')
-    expect(page).to have_content('Ingredients')
-    expect(page).to have_content('Instructions')
-    expect(page).to have_content('Submit')
+    expect(page).to have_current_path(new_recipe_path)
   end
 
-  it 'should be able to create a new recipe' do
+  it 'should be able to see save recipe and click on the recently recipe and enter to recipe details' do
     click_link 'New Recipe'
-    fill_in 'Name', with: 'Sushi'
-    fill_in 'Ingredients', with: 'Sushi'
-    fill_in 'Instructions', with: 'Sushi'
-    click_button 'Submit'
-    expect(page).to have_content('Sushi')
+    fill_in 'Name', with: 'Mac and Cheese'
+    fill_in 'Description',
+            with: 'Very yummy mac & cheese'
+    fill_in 'Preparation time', with: '20'
+    fill_in 'Cooking time', with: '40'
+    click_button 'Create'
+    expect(page).to have_content('Mac and Cheese')
   end
 
-  it 'should be able to see a recipe show page' do
-    click_link 'New Recipe'
-    fill_in 'Name', with: 'Sushi'
-    fill_in 'Ingredients', with: 'Sushi'
-    fill_in 'Instructions', with: 'Sushi'
-    click_button 'Submit'
-    click_link 'Sushi'
-    expect(page).to have_content('Sushi')
-    expect(page).to have_content('Sushi')
-    expect(page).to have_content('Sushi')
+  it "shouldn't be able to remove if you are not the owner of the recipe" do
+    click_on 'Sign out'
+    visit new_user_session_path
+    fill_in 'Email', with: @user2.email
+    fill_in 'Password', with: @user2.password
+    click_button 'Log In'
+    visit recipes_path
+    expect(page).to_not have_content('Remove')
   end
-  
+end
