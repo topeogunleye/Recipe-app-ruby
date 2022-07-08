@@ -5,16 +5,17 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-puts "Seeding..."
 
-User.destroy_all
+# puts "Seeding..."
 
-user = User.new(
-  :name                  => "Admin User",
-  :email                 => "admin@admin.admin",
-  :password              => "123456",
-  :password_confirmation => "123456"
-)
-user.save!
+# User.destroy_all
 
-puts "Seeding done."
+# user = User.new(
+#   :name                  => "Admin User",
+#   :email                 => "admin@admin.admin",
+#   :password              => "123456",
+#   :password_confirmation => "123456"
+# )
+# user.save!
+
+# puts "Seeding done."
