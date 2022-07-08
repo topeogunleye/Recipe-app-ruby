@@ -11,4 +11,3 @@ class CreateRecipes < ActiveRecord::Migration[7.0]
     end
   end
 end
-rails g migration AddUserToFoods user:references
