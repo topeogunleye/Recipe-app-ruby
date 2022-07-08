@@ -32,6 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_07_121219) do
   end
 
   create_table "inventory_foods", force: :cascade do |t|
+    t.string "name"
     t.integer "quantity"
     t.bigint "foods_id", null: false
     t.bigint "inventories_id", null: false
@@ -57,9 +58,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_07_121219) do
     t.integer "cooking_time"
     t.string "description"
     t.boolean "publik"
-    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 
