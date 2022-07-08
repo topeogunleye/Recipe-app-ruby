@@ -6,9 +6,9 @@
     <% @inventories.each do |inventory| %>
       <div class="inventory-container-grid">
         <div class="inventory-details-actions">
-          <p>
+          <h3>
             <%= link_to "#{inventory.name}", inventory_path(inventory.id), class: "inventory-details-link"  %> 
-          </p>
+          </h3>
           <% if @current_user.id == inventory.user_id %>
             <%= button_to "REMOVE", inventory_path(inventory.id), method: :delete, class: "delete-inventory-button" %>
           <% end %>
