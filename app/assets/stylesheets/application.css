@@ -1,0 +1,12 @@
+/* Inventory Start */
+
+.inventory-form {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 100px;
+}
+
+/* .inventory-form:last-child {
+  width: 100px;
+  padding: 10px;
+} */

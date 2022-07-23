@@ -1,59 +1,68 @@
+# README
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Recipe app
 
-> One paragraph statement about the project.
+> My first rails project during Microverse.
 
-![screenshot](./app_screenshot.png)
-
-Additional description about the project and its features.
+The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
+- Ruby
+- Ruby on Rails
+- Rubocop, stylelint, heroku actions
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
+## 🛠 Installation & Set Up
+
+1. Install Gems
+
+   ```sh
+   bundle install
+   ```
+
+2. Start the development server
+
+   ```sh
+    rails s
+   ```
+
 
 ### Prerequisites
 
 ### Setup
 
 ### Install
+The following tools help make easier to work with sample code.
 
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+- [git](https://git-scm.com/downloads): A tool for managing source code
+- [Visual Studio Code](https://code.visualstudio.com/): A source code editor
+- [NVM](https://github.com/nvm-sh/nvm)
+- [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
+- [Rails](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-20-04)
 
 ## Authors
 
-👤 **Author1**
+👤 **Bonke**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@bonkegcobo](https://github.com/bonkegcobo)
+- Twitter: [@bonkegcobo](https://twitter.com/bonkegcobo)
+- LinkedIn: [bonkegcobo](https://linkedin.com/in/bonkegcobo)
 
-👤 **Author2**
+👤 **Islam Bahnas**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Banstein](https://github.com/Banstein)
+- Twitter: [@islam_bahnas](https://twitter.com/islam_bahnas)
+- LinkedIn: [islam-bahnas](www.linkedin.com/in/islam-bahnas)
+
+👤 **Temitope Ogunleye**
+
+- GitHub: [@topeogunleye](https://github.com/topeogunleye)
+- Twitter: [@tope_leye](https://twitter.com/tope_leye)
+- LinkedIn: [ogunleye](https://linkedin.com/in/ogunleye)
 
 ## 🤝 Contributing
 
