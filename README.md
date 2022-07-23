@@ -48,9 +48,9 @@ The following tools help make easier to work with sample code.
 
 👤 **Bonke**
 
-- GitHub: [@githubhandle](https://github.com/bonkegcobo)
-- Twitter: [@twitterhandle](https://twitter.com/bonkegcobo)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/bonkegcobo)
+- GitHub: [@bonkegcobo](https://github.com/bonkegcobo)
+- Twitter: [@bonkegcobo](https://twitter.com/bonkegcobo)
+- LinkedIn: [bonkegcobo](https://linkedin.com/in/bonkegcobo)
 
 👤 **Islam Bahnas**
 
